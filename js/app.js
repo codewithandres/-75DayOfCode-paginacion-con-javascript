@@ -20,7 +20,7 @@ const cargarPeliculas = async () => {
 			`https://api.themoviedb.org/3/movie/popular?language=en-MX&page=${paguina}&api_key=8566ac87fd44ddb80115ffdf24e1fdcf`,
 		);
 
-		if (!response.status === 200) return console.log('error del sevidor');
+		if (response.status !== 200) return console.log('error del sevidor');
 		if (response.status === 401)
 			return console.log('usuario no autorizado');
 		if (response.status === 404)
@@ -36,11 +36,11 @@ cargarPeliculas();
 
 const mostrasPeliculas = (data) => {
 	let peliculas = '';
-	data.map((pelicula) => {
+	data.map(({ title, poster_path }) => {
 		peliculas += `
 			<div class="pelicula">
-				<img class="poster" src="https://image.tmdb.org/t/p/w500/${pelicula.poster_path}">
-				<h3 class="titulo">${pelicula.title}</h3>
+				<img class="poster" src="https://image.tmdb.org/t/p/w500/${poster_path}">
+				<h3 class="titulo">${title}</h3>
 			</div>
 		`;
 	});
