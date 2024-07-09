@@ -1,7 +1,9 @@
+// Exportamos la función mostrasPeliculas
 export const mostrasPeliculas = (data) => {
 	let peliculas = [];
 
 	data.map(({ title, poster_path }) => {
+		// Creamos un HTML para cada película con su título e imagen
 		peliculas += `
 			<div class="pelicula">
 				<img class="poster" src="https://image.tmdb.org/t/p/w500/${poster_path}">
@@ -10,5 +12,6 @@ export const mostrasPeliculas = (data) => {
 		`;
 	});
 
+	// Insertamos el HTML generado en el contenedor
 	document.getElementById('contenedor').innerHTML = peliculas;
 };
