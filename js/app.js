@@ -1,6 +1,5 @@
 // Importamos la función cargarPeliculas desde el archivo peticion.js
 import { cargarPeliculas } from './peticion.js';
-
 // Inicializamos la variable paguina (¿quizás quisiste decir "página"?) en 1
 let paguina = 1;
 

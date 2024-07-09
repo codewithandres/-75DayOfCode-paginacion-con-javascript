@@ -1,3 +1,5 @@
+import { animarPleiculas } from './animacionPeliculas.js';
+
 // Exportamos la función mostrasPeliculas
 export const mostrasPeliculas = (data) => {
 	let peliculas = [];
@@ -14,4 +16,5 @@ export const mostrasPeliculas = (data) => {
 
 	// Insertamos el HTML generado en el contenedor
 	document.getElementById('contenedor').innerHTML = peliculas;
+	animarPleiculas();
 };
