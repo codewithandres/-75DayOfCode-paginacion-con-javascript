@@ -1,5 +1,4 @@
 import { mostrasPeliculas } from './mostrarPeliculas.js';
-
 // Exportamos la función cargarPeliculas
 export const cargarPeliculas = async (paguina = 1) => {
 	try {
@@ -16,9 +15,7 @@ export const cargarPeliculas = async (paguina = 1) => {
 
 		if (response.status === 404)
 			return console.log('Pelicula No Encontrada 🕵️');
-
 		const { results } = await response.json();
-
 		// Llamamos a la función mostrasPeliculas con los resultados obtenidos
 		mostrasPeliculas(results);
 	} catch (error) {

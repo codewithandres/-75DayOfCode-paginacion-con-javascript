@@ -1,5 +1,11 @@
 // Importamos la función cargarPeliculas desde el archivo peticion.js
 import { cargarPeliculas } from './peticion.js';
+window.addEventListener('DOMContentLoaded', () => {
+	document.getElementById('contenedor').innerHTML = `<h1>Loading..<h1>`;
+	// Cargamos las películas al inicio
+	cargarPeliculas();
+});
+
 // Inicializamos la variable paguina (¿quizás quisiste decir "página"?) en 1
 let paguina = 1;
 
@@ -26,6 +32,3 @@ btnAnterior.addEventListener('click', () => {
 	paguina -= 1;
 	cargarPeliculas(paguina);
 });
-
-// Cargamos las películas al inicio
-cargarPeliculas();
