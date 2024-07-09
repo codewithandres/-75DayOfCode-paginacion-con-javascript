@@ -1,5 +1,6 @@
 export const mostrasPeliculas = (data) => {
-	let peliculas = '';
+	let peliculas = [];
+
 	data.map(({ title, poster_path }) => {
 		peliculas += `
 			<div class="pelicula">
@@ -8,5 +9,6 @@ export const mostrasPeliculas = (data) => {
 			</div>
 		`;
 	});
+
 	document.getElementById('contenedor').innerHTML = peliculas;
 };
