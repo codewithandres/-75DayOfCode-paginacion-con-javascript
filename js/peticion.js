@@ -7,13 +7,13 @@ export const cargarPeliculas = async (paguina = 1) => {
 		);
 
 		if (response.status !== 200)
-			return console.log('error en el sevidor 😥');
+			return console.log('Error En El Sevidor 😥');
 
 		if (response.status === 401)
-			return console.log('usuario no autorizado 🙅‍♂️');
+			return console.log('Usuario No Autorizado 🙅‍♂️');
 
 		if (response.status === 404)
-			return console.log('pelicula no encontrada 🕵️');
+			return console.log('Pelicula No Encontrada 🕵️');
 
 		const { results } = await response.json();
 
