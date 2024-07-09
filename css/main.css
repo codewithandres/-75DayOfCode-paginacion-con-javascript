@@ -1,3 +1,5 @@
+
+
 * {
 	margin: 0;
 	padding: 0;
@@ -16,8 +18,8 @@ body {
 	margin: 40px auto 100px auto;
 
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: 40px;
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	gap: 2em;
 }
 
 .contenedor .pelicula {
