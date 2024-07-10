@@ -1,3 +1,5 @@
+![alt text](<assets/bandicam 2024-07-09 22-28-24-373.jpg>)
+
 # 🎥 Movie Pagination with JavaScript
 
 This project demonstrates how to implement pagination for displaying movie data using JavaScript. It fetches movie data from an API and allows users to navigate through different pages of movie listings. 🌐
